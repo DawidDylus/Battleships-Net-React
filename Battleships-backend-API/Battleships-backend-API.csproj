@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="react-frontend\**" />
+    <Content Remove="react-frontend\**" />
+    <EmbeddedResource Remove="react-frontend\**" />
+    <None Remove="react-frontend\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 

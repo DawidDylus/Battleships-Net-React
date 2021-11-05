@@ -32,6 +32,17 @@ namespace Battleships_backend_API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Battleships_backend_API", Version = "v1" });
             });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("BattleshipPolicy", builder =>
+                {
+                    builder.WithOrigins("*")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowAnyOrigin();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,12 +59,15 @@ namespace Battleships_backend_API
 
             app.UseRouting();
 
+            app.UseCors("BattleshipPolicy");
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+            
         }
     }
 }
