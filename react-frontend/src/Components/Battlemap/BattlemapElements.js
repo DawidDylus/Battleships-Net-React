@@ -24,6 +24,10 @@ export const Square = styled.div`
     &.ship {
         background-color: grey;
     }
+    
+    &.miss {
+        background-color: blue;
+    }
 
     &.hit {
         background-color: red;       
