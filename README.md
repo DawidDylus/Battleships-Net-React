@@ -18,8 +18,8 @@
 	* Destroyer	- 2 squares
  
 ### Decision 1. - How to handle generating Battleships?
- Between generating all ships in the backend from the start and taking actions in the frontend side to call for API(generating the whole game more slowly).
- I choose generating everything in the .Net. The whole operation could be done faster. We can avoid multimple calls to API. And since we have the whole record of the game,
+ Between generating all ships in the backend from the start and taking actions on the frontend side to call for API(generating the whole game more slowly).
+ I've chosen generating everything in the .Net. The whole operation could be done faster. We could avoid multimple calls to API. And since we have the whole record of the game,
  it could be easily stored in the database if that functionality would be needed in the future.
  
 ### Decision 2. - How to store data about generated Ships Locations?
